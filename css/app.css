@@ -30,6 +30,7 @@ footer, footer a {
     font-size: 5em;
 }
 
+<<<<<<< Updated upstream
 #catalog {
     background-color: #83695A;
     height: 3em;
@@ -60,4 +61,16 @@ footer, footer a {
     background-color: #6B4C3A;
     width: 30em;
     height: 80em;
+=======
+#catalog > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .dropdown-menu {
+    display: none;
+>>>>>>> Stashed changes
 }
