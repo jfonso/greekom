@@ -29,3 +29,28 @@ footer, footer a {
     text-decoration: none;
     font-size: 5em;
 }
+
+#catalog {
+    background-color: #83695A;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#catalog ul {
+    display: flex;
+}
+
+#catalog ul li {
+    font-size: 1.5em;
+    margin: 0 15px;
+}
+
+#catalog ul li a {
+    color: #F5D4A1;
+}
+
+#authentication {
+    color: #F5F4BC;
+}
