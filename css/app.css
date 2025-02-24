@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: "Inknut Antiqua", serif;
 }
@@ -14,4 +15,12 @@ footer {
 
 footer, footer a {
     color: #F5D4A1;
+=======
+#general-header {
+    background-color: #3B2A2A;
+}
+
+#title {
+    font-size: 50em;
+>>>>>>> 7270fc5 (Added some things)
 }
