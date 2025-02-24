@@ -1,0 +1,17 @@
+body {
+    font-family: "Inknut Antiqua", serif;
+}
+
+footer {
+    background-color: #3B2A2A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+footer, footer a {
+    color: #F5D4A1;
+}
