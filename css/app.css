@@ -55,3 +55,9 @@ footer, footer a {
 #authentication {
     color: #F5F4BC;
 }
+
+#info-box {
+    background-color: #6B4C3A;
+    width: 30em;
+    height: 80em;
+}
