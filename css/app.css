@@ -49,6 +49,7 @@ footer, footer a {
 
 #catalog ul li a {
     color: #F5D4A1;
+    text-decoration: none;
 }
 
 #authentication {

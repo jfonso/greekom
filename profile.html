@@ -1,16 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description">
-  <meta name="keywords">
-  <title>User Profile - GreeKom</title>
+    <meta charset="utf-8">
+    <meta name="description">
+    <meta name="keywords">
+    <title>Profile - GreeKom</title>
+    <script src="js/xlu-include-file.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <header>
-    </header>
-    <nav></nav>
+    <header xlu-include-file="templates/header.html"></header>
+    <nav xlu-include-file="templates/navbar.html"></nav>
     <section id="main">
         <section id="profile-menu">
             <div>
@@ -34,5 +38,9 @@
         </section>
         <section id="menu-option-content"></section>
     </section>
-    <footer></footer>
+    <footer xlu-include-file="templates/footer.html"></footer>
+
+    <script>
+        xLuIncludeFile();
+    </script>
 </body>
