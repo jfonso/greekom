@@ -139,3 +139,57 @@ input {
     color: #FFFFFF;
     display: block;
 }
+
+#catalog > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .dropdown-menu {
+    display: none;
+}
+
+.illustrated-article-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.index-section-title {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.index-section > hr {
+    max-width: 90%;
+}
+
+.article-link {
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+}
+.article-link img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.25rem;
+}
+.article-link-text {
+    max-width: 8rem;
+    line-height: 1.2;
+}
+
+#main {
+    max-width: 72rem;
+    margin: 1rem auto;
+}
+
+#main-title {
+    text-align: center;
+    font-size: 3rem;
+}
