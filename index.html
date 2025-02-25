@@ -19,24 +19,24 @@
     <nav xlu-include-file="templates/navbar.html"></nav>
 
     <section id="main">
-        <h2 id="main-title">Main information</h2>
+        <h2 id="main-title">Main Information</h2>
 
-        <section id="main-info-section">
-            <h3>Main characters</h3>
-            <hr id="line">
-            <ul></ul>
+        <section id="main-characters" class="index-section">
+            <h3 class="index-section-title">Main characters</h3>
+            <hr>
+            <ul xlu-include-file="/templates/illustrated-characters-list.html" class="illustrated-article-list"></ul>
         </section>
 
-        <section id="main-info-section">
-            <h3>Main locations</h3>
-            <hr id="line">
-            <ul></ul>
+        <section id="main-locations">
+            <h3>Main locactions</h3>
+            <hr>
+            <ul xlu-include-file="/templates/illustrated-locations-list.html" class="illustrated-article-list"></ul>
         </section>
 
         <section id="main-info-section">
             <h3>Main Myths</h3>
-            <hr id="line">
-            <ul></ul>
+            <hr>
+            <ul xlu-include-file="/templates/illustrated-myths-list.html" class="illustrated-article-list"></ul>
         </section>
     </section>
 

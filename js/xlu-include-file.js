@@ -48,6 +48,13 @@ async function xLuIncludeFile() {
 
                     let content = await response.text();
 
+                    let dataKeys = Object.keys(z[i].dataset);
+                    for (j = 0; j < dataKeys.length; j++) {
+                        let dataKey = dataKeys[j];
+                        let dataValue = z[i].dataset[dataKey];
+                        content = content.replace(new RegExp(`{{${dataKey}}}`,'g'),dataValue);
+                    }
+
                     // Si el archivo es una plantilla, reemplazamos los placeholders
                     if (file === "article-template.html") {
                         let articleData = {
