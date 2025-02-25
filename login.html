@@ -17,14 +17,17 @@
     <header xlu-include-file="templates/header.html"></header>
     <nav xlu-include-file="templates/navbar.html"></nav>
 
-    <section id="main">
-        <h2 id="main-title">Log in</h2>
+
+    <h2 id="main-title">Log in</h2>
+    <section id="main-login">
         <form id="login-form" action="">
-            <div>
+            <div id="inputs">
+                <p id="input-label">Username</p>
                 <input type="text" name="username" placeholder="Username">
+                <p id="input-label">Password</p>
                 <input type="password" name="password" placeholder="Password">
             </div>
-            <div>
+            <div id="button">
                 <button type="submit">Confirm</button>
             </div>
         </form>
@@ -37,3 +40,4 @@
         xLuIncludeFile();
     </script>
 </body>
+</html>

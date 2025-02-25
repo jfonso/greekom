@@ -16,16 +16,20 @@
 <body>
     <header xlu-include-file="templates/header.html"></header>
     <nav xlu-include-file="templates/navbar.html"></nav>
-    <section id="main">
-        <h2 id="main-title">Sign up</h2>
+    <h2 id="main-title">Sign up</h2>
+    <section id="main-login">
         <form id="login-form" action="">
-            <div>
+            <div id="inputs">
+                <p id="input-label">Username</p>
                 <input type="text" name="username" placeholder="Username">
+                <p id="input-label">Email</p>
                 <input type="email" name="email" placeholder="Email">
+                <p id="input-label">Password</p>
                 <input type="password" name="password" placeholder="Password">
+                <p id="input-label">Confirm Password</p>
                 <input type="password" name="confirmPassword" placeholder="Confirm Password">
             </div>
-            <div>
+            <div id="button">
                 <button type="submit">Confirm</button>
             </div>
         </form>
@@ -36,3 +40,4 @@
         xLuIncludeFile();
     </script>
 </body>
+</html>
