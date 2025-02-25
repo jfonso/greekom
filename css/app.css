@@ -1,83 +1,3 @@
-body {
-    font-family: "Inknut Antiqua", serif;
-    background-color: #F4E9DB;
-}
-
-footer {
-    background-color: #3B2A2A;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-    padding: 1rem 0;
-    font-size: 0.8rem;
-}
-
-footer, footer a {
-    color: #F5D4A1;
-}
-
-header {
-    background-color: #3B2A2A;
-    height: 8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h3 {
-    font-size: 3rem;
-    color: #000000;
-}
-
-input {
-    width: 75%;
-    font-size: 1rem;
-    border: 1px solid #000000;
-    padding: 0.6rem;
-    border-radius: 0.7rem;
-}
-
-#main-title {
-    font-size: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.7em 0;
-}
-
-#title a {
-    color: #C2977E;
-    text-decoration: none;
-    font-size: 5rem;
-}
-
-#catalog {
-    background-color: #83695A;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#catalog ul {
-    display: flex;
-}
-
-#catalog ul li {
-    font-size: 1.5rem;
-    margin: 0 15px;
-}
-
-#catalog ul li a {
-    color: #F5D4A1;
-    text-decoration: none;
-}
-
-#authentication {
-    color: #F5F4BC;
-}
-
 #info-box {
     background-color: #6B4C3A;
     width: 30rem;
@@ -138,4 +58,44 @@ input {
 #input-label {
     color: #FFFFFF;
     display: block;
+}
+
+#profile-menu {
+    background-color: #6B4C3A;
+    color: #FFFFFF;
+    width: 10rem;
+    height: 12rem;
+    margin: 1rem 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-option {
+    background-color: #3b2a2a;
+    font-size: 12px;
+    height: 1.5rem;
+    width: 100%;
+    margin: 0.1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-profile {
+    display: flex;
+    justify-content: center;
+}
+
+#menu-option-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem;
+    width: 20rem;
+    height: 15rem;
+    background-color: #6a4b3a;
+    border-radius: 0.8rem;
 }
