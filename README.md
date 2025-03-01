@@ -24,29 +24,37 @@ accesibles desde el propio perfil.
 
 
 ### Listado de páginas
-En el listado de páginas que se presenta, se especifica el nombre del del archivo html y, posteriormente, el nombre 
-atribuido al _header_ en los Mock Up's. Esto quiere decir que, en el Figma, aquel Mock Up cuyo _header_ tenga el mismo
-nombre se indica en la siguiente lista, ese es el Mock Up con el que corresponde dicha página.
-- index.html : Main Page
-- character.html : Character Page, Location Page, Myth Page
-- forum.html : Forum Page
-- login.html : Log In Page
-- profile.html : Profile Page (6 pages)
-- signup.html : Sign Up Page
-- thread.html : Thread Page
+En el listado de páginas que se presenta, se especifica la siguiente información:
+{Nombre del archivo (.html)} : "{Nombre atribuido al _header_ correspondiente en los Mock Up's}" -> {Descripción de la página}.
+- index.html 		: "Main Page" -> la página principal.
+- article.html 		: "Character Page", "Location Page", "Myth Page" -> las páginas de artículos que contienen la información de cada entidad.
+- forum.html 		: "Forum Page" -> la página del foro.
+- login.html 		: "Log In Page" -> la página de inicio de sesión.
+- profile.html 		: "Profile Page" (6 pages) -> la página general de la información del perfil. Esta estará en desuso, ya que su implementación se hará en un Sprint posterior.
+- profile-change-password : "Profile - Change Password" -> la página del perfil para cambiar la contraseña.
+- profile-favourite 	: "Profile - Favourite Characters" -> la página del perfil que muestra los personajes, localizaciones, mitos e hilos favoritos.
+- profile-information  	: "Profile - Personal Information" -> la página del perfil general que muestra la información del perfil.
+- signup.html 		: Sign Up Page -> la página de registro de cuenta.
+- thread.html 		: Thread Page -> la página de hilo.
 
 
 ### Listado de templates
-- article.html : Corresponde con el cuerpo de los artículos que mostrarán las páginas de la wiki de personajes,
+En el listado de templates que se presenta, se especifica la siguiente información:
+{Nombre del archivo (.html)} : {Descripción de lo que representa}.
+- article.html 		: Corresponde con el cuerpo de los artículos que mostrarán las páginas de la wiki de personajes,
 localizaciones y mitos. Estas tres páginas siguen el mismo formato.
-- footer.html : Corresponde con el pie de página (_footer_) que se mostrará en todas las páginas.
-- header.html : Corresponde con la cabecera (_header_) que se mostrará en todas las páginas.
-- infobox-section.html : Corresponde con la caja de información que se mostrará a un lado en las páginas de la wiki de
-personajes, localizaciones y mitos. Estas cajas contendrán un resumen de la información más relevante acerca del artículo 
-correspondiente.
-- navbar.html : Corresponde con la barra de navegación (_navbar_) que se mostrará en todas las páginas.
-- post.html : Corresponde con una publicación (_post_) en la página del hilo correspondiente. 
-- thread-item.html : Corresponde cada una de las publicaciones del foro en la página del foro.
+- footer.html 		: Corresponde con el pie de página (_footer_) que se mostrará en todas las páginas.
+- gallery-image.html	: Corresponde con la galería de imágenes de los artículos.
+- header.html 		: Corresponde con la cabecera (_header_) que se mostrará en todas las páginas.
+- ilustrated-link.html 	: Corresponde con la caja de información destacada de cada artículo.
+- infobox-section.html 	: Corresponde con la caja de información que se mostrará a un lado en las páginas de la wiki de personajes, localizaciones y mitos. Estas cajas contendrán un resumen de la información más relevante acerca del artículo correspondiente.
+- navbar.html 		: Corresponde con la barra de navegación (_navbar_) que se mostrará en todas las páginas.
+- authenticated.html 	: Corresponde a la sección de autenticación de la barra de navegación cuando se ha iniciado sesión (sale username).
+- authentication.html 	: Corresponde a la sección de autenticación de la barra de navegación cuando se no ha iniciado sesión (sale opción de inicio de sesión y registro).
+- catalog-item.html 	: 
+- post.html 		: Corresponde con una publicación (_post_) en la página del hilo correspondiente.
+- thread.html 		: Corresponde con el formato en el que se representa el hilo.
+- thread-item.html 	: Corresponde cada una de las publicaciones del foro en la página del foro.
 
 
 ### Archivos

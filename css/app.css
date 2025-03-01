@@ -26,7 +26,7 @@ header {
 }
 
 input {
-    width: 75%;
+    width: 85%;
     font-size: 1rem;
     border: 1px solid #000000;
     padding: 0.6rem;
@@ -133,6 +133,7 @@ input {
     align-items: center;
     padding: 0.3rem 2rem;
     margin: 2rem 0 0 0;
+    cursor: pointer;
 }
 
 #input-label {

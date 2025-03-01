@@ -31,9 +31,23 @@
 }
 
 #menu-option-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40rem;
-    height: 25rem;
+    height: 30rem;
     margin: 1rem 1rem;
-    background-color: #6a4b3a;
+    background-color: #3b2a2a;
     border-radius: 0.8rem;
+}
+
+#input-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 4rem;
+    margin: 0 0 1rem 0rem;
+    border-radius: 0.8rem;
+    background-color: #716d6d;
 }
