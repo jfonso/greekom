@@ -99,7 +99,7 @@ input {
 #main-login {
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 100vh;
 }
 
 #login-form {
@@ -109,6 +109,7 @@ input {
     justify-content: center;
     border-radius: 1rem;
     width: 20rem;
+    max-height: 25rem;
     padding: 2rem 2rem;
     background-color: #3B2A2A;
     margin: 1rem 0 3rem 0;
