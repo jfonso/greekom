@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description">
     <meta name="keywords">
-    <title>Thread - GreeKom</title>
+    <title>GreeKom</title>
     <script src="js/xlu-include-file.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,16 @@
 <body>
     <header xlu-include-file="templates/header.html"></header>
     <nav xlu-include-file="templates/navbar.html"></nav>
-    <section id="main" class="thread" xlu-include-file="templates/thread.html" data-json="data/forum/thread/thread-1.json">
+
+    <section id="main">
+        <article id="article" xlu-include-file="templates/article.html"></article>
     </section>
+
+
     <footer xlu-include-file="templates/footer.html"></footer>
 
     <script>
-        document.getElementById('main').dataset['json'] = '/data/forum/thread/'+(new URLSearchParams(window.location.search)).get('id')+'.json';
+        document.getElementById('article').dataset['json'] = '/data/article/'+window.location.pathname.match(/([^/]+).html$/)[1]+'.json';
         xLuIncludeFile();
     </script>
 </body>
