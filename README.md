@@ -55,6 +55,9 @@ localizaciones y mitos. Estas tres páginas siguen el mismo formato.
 - post.html 		: Corresponde con una publicación (_post_) en la página del hilo correspondiente.
 - thread.html 		: Corresponde con el formato en el que se representa el hilo.
 - thread-item.html 	: Corresponde cada una de las publicaciones del foro en la página del foro.
+- change-password.html 	: Corresponde con la sección del perfil para cambiar la contraseña (se usará más adelante).
+- favorites.html 	: Corresponde con la sección del perfil para ver los favoritos (se usará más adelante).
+- personal-information 	: Corresponde con la sección del perfil para ver la información de la cuenta (se usará más adelante).
 
 
 ### Archivos
