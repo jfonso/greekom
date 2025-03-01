@@ -1,0 +1,17 @@
+<div>
+    <div id="thread-controls">
+        <div>
+            <button type="button">Reply</button>
+        </div>
+    </div>
+    <h2 id="main-title">
+        <span>{{title}}</span>
+        <div id="fav-thread">
+            <button type="button">&star;</button>
+        </div>
+    </h2>
+</div>
+<section id="opening-post" xlu-include-file="/templates/post.html" data-user="{{user}}" data-content="{{content}}">
+</section>
+<hr>
+<section id="thread-responses" xlu-include-file="/templates/post.html" data-array='{{posts}}'></section>

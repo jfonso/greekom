@@ -17,24 +17,12 @@
 <body>
     <header xlu-include-file="templates/header.html"></header>
     <nav xlu-include-file="templates/navbar.html"></nav>
-    <section id="main">
-        <div>
-            <h2 id="thread-name"></h2>
-            <div>
-                <button>&star;</button>
-            </div>
-            <div>
-                <button>Reply</button>
-            </div>
-        </div>
-        <section id="opening-post">
-        </section>
-        <hr>
-        <section id="thread-responses"></section>
+    <section id="main" class="thread" xlu-include-file="/templates/thread.html" data-json="/data/forum/thread/thread-1.json">
     </section>
     <footer xlu-include-file="templates/footer.html"></footer>
 
     <script>
+        document.getElementById('main').dataset['json'] = '/data/forum/thread/'+(new URLSearchParams(window.location.search)).get('id')+'.json';
         xLuIncludeFile();
     </script>
 </body>
