@@ -18,14 +18,14 @@
     <header xlu-include-file="templates/header.html"></header>
     <nav xlu-include-file="templates/navbar.html"></nav>
 
-    <section id="main">
+    <section id="main" class="forum">
         <div>
-            <h2 id="main-title">Forum</h2>
-            <div>
-                <input type="text" name="search">
+            <div id="forum-search-container">
+                <input type="text" name="search" placeholder="Username, Title...">
             </div>
+            <h2 id="main-title">Forum</h2>
         </div>
-        <section id="thread-list"></section>
+        <ul id="thread-list" xlu-include-file="/templates/thread-item.html" data-json="/data/forum/thread-list.json"></ul>
     </section>
 
 

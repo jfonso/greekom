@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Thread 1",
+        "user": "user001",
+        "id": "thread-1",
+        "updated": "2025-02-28"
+    },
+    {
+        "title": "Thread 3",
+        "user": "user002",
+        "id": "thread-3",
+        "updated": "2025-01-28"
+    }
+]
