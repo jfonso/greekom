@@ -233,6 +233,7 @@ input {
     display: flex;
     column-gap: 0.6rem;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 #gallery img {
     width: 12rem;

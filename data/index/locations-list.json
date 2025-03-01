@@ -2,21 +2,21 @@
     {
         "name": "Olympos",
         "id": "olympos",
-        "image_url": "/img/locations/O24.9Ganymedes.jpg"
+        "image_url": "img/locations/O24.9Ganymedes.jpg"
     },
     {
         "name": "Haides",
         "id": "haides",
-        "image_url": "/img/locations/K14.1Haides.jpg"
+        "image_url": "img/locations/K14.1Haides.jpg"
     },
     {
         "name": "Elysion",
         "id": "elyson",
-        "image_url": "/img/locations/the_elysian_fields.jpg"
+        "image_url": "img/locations/the_elysian_fields.jpg"
     },
     {
         "name": "Tartarus",
         "id": "tartarus",
-        "image_url": "/img/locations/tartarus.jpg"
+        "image_url": "img/locations/tartarus.jpg"
     }
 ]

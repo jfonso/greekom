@@ -2,21 +2,21 @@
     {
         "name": "The twelve labors of Heracles",
         "id": "the-twelve-labors-of-heracles",
-        "image_url": "/img/myths/heracles-hydra.jpg"
+        "image_url": "img/myths/heracles-hydra.jpg"
     },
     {
         "name": "Zeus' abduction of Ganymede",
         "id": "zeus-abduction-of-ganymede",
-        "image_url": "/img/myths/Z32.2Ganymedes.jpg"
+        "image_url": "img/myths/Z32.2Ganymedes.jpg"
     },
     {
         "name": "Plato's island of Atlantis",
         "id": "plato-s-island-of-atlantis",
-        "image_url": "/img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg"
+        "image_url": "img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg"
     },
     {
         "name": "The Iliad",
         "id": "the-iliad",
-        "image_url": "/img/myths/TheIliad.webp"
+        "image_url": "img/myths/TheIliad.webp"
     }
 ]
