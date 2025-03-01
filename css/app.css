@@ -70,6 +70,11 @@ input {
 }
 
 #authentication {
+    position: absolute;
+    right: 0;
+}
+
+#catalog ul#authentication li a {
     color: #F5F4BC;
 }
 
@@ -143,8 +148,23 @@ input {
     gap: 1rem;
 }
 
-nav .dropdown-menu {
+#catalog ul.dropdown-menu {
     display: none;
+    position: absolute;
+}
+
+#catalog ul.dropdown-menu.show {
+    display: block;
+    background-color: #83695A;
+    line-height: 1.2;
+    z-index: 1;
+}
+#catalog ul.dropdown-menu.show li {
+    margin: 0;
+    padding: 0.5rem;
+}
+#catalog ul.dropdown-menu.show > li:hover {
+    background-color: #3B2A2A;
 }
 
 .illustrated-article-list {

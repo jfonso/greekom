@@ -34,6 +34,26 @@ function xLuIncludeFile() {
 }
 */
 
+window.addEventListener('load',function(){
+    function hideDropdown() {
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(el){
+            el.classList.remove('show');
+            document.querySelector('body').removeEventListener('click',hideDropdown)
+        });
+    }
+    document.querySelector('body').addEventListener('click',function(e){
+        if (!e.target.classList.contains('dropdown-toggle')) return;
+        e.preventDefault();
+        e.stopPropagation();
+        hideDropdown();
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(el){
+            el.classList.remove('show');
+        });
+        e.target.nextElementSibling.classList.toggle('show');
+        document.querySelector('body').addEventListener('click',hideDropdown)
+    });
+});
+
 async function xLuIncludeFile() {
     let z = document.getElementsByTagName("*");
 
@@ -41,7 +61,6 @@ async function xLuIncludeFile() {
         if (z[i].getAttribute("xlu-include-file")) {
             let a = z[i].cloneNode(false);
             let file = z[i].getAttribute("xlu-include-file");
-            console.log(file);
 
             try {
                 let response = await fetch(file);
