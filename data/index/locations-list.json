@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Olympos",
+        "url": "article.html?id=olympos",
+        "image_url": "/img/locations/O24.9Ganymedes.jpg"
+    },
+    {
+        "name": "Haides",
+        "url": "article.html?id=haides",
+        "image_url": "/img/locations/K14.1Haides.jpg"
+    },
+    {
+        "name": "Elysion",
+        "url": "article.html?id=elyson",
+        "image_url": "/img/locations/the_elysian_fields.jpg"
+    },
+    {
+        "name": "Tartarus",
+        "url": "article.html?id=tartarus",
+        "image_url": "/img/locations/tartarus.jpg"
+    }
+]

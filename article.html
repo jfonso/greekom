@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description">
+    <meta name="keywords">
+    <title>GreeKom</title>
+    <script src="/js/xlu-include-file.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general-styles.css">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <header xlu-include-file="/templates/header.html"></header>
+    <nav xlu-include-file="/templates/navbar.html"></nav>
+
+    <section id="main">
+        <article id="article" xlu-include-file="/templates/article.html"></article>
+    </section>
+
+
+    <footer xlu-include-file="/templates/footer.html"></footer>
+
+    <script>
+        document.getElementById('article').dataset['json'] = '/data/article/'+(new URLSearchParams(window.location.search)).get('id')+'.json';
+        xLuIncludeFile();
+    </script>
+</body>
+</html>

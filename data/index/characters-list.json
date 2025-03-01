@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Aphrodite",
+        "url": "article.html?id=aphrodite",
+        "image_url": "/img/characters/greek-gods-aphrodite.jpg"
+    },
+    {
+        "name": "Apollo",
+        "url": "article.html?id=apollo",
+        "image_url": "/img/characters/greek-gods-apollo.jpg"
+    },
+    {
+        "name": "Ares",
+        "url": "article.html?id=ares",
+        "image_url": "/img/characters/greek-gods-ares.jpg"
+    },
+    {
+        "name": "Artemis",
+        "url": "article.html?id=artemis",
+        "image_url": "/img/characters/greek-gods-artemis.jpg"
+    }
+]

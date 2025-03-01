@@ -41,6 +41,7 @@ async function xLuIncludeFile() {
         if (z[i].getAttribute("xlu-include-file")) {
             let a = z[i].cloneNode(false);
             let file = z[i].getAttribute("xlu-include-file");
+            console.log(file);
 
             try {
                 let response = await fetch(file);
@@ -52,7 +53,29 @@ async function xLuIncludeFile() {
                     for (j = 0; j < dataKeys.length; j++) {
                         let dataKey = dataKeys[j];
                         let dataValue = z[i].dataset[dataKey];
-                        content = content.replace(new RegExp(`{{${dataKey}}}`,'g'),dataValue);
+                        if (dataKey==='json') {
+                            dataKey = 'array';
+                            response = await fetch(dataValue);
+                            if (response.ok) {
+                                dataValue = await response.text();
+                            }
+                        }
+                        if (dataKey==='array') {
+                            let template = content
+                            content = '';
+                            if (dataValue.startsWith('[')) {
+                                dataValue = JSON.parse(dataValue);
+                                dataValue.forEach(function(obj){
+                                    let childContent = template;
+                                    for (const key in obj) {
+                                        childContent = childContent.replace(new RegExp(`{{${key}}}`,'gi'),obj[key])
+                                    }
+                                    content += childContent;
+                                });
+                            }
+                        } else {
+                            content = content.replace(new RegExp(`{{${dataKey}}}`,'gi'),dataValue);
+                        }
                     }
 
                     // Si el archivo es una plantilla, reemplazamos los placeholders

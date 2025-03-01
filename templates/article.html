@@ -1,20 +1,37 @@
-<h2 id="article-title"></h2>
-<section id="introduction"></section>
-<section id="mythic-history"></section>
-<section id="gallery"></section>
-<section id="related-myths"></section>
-<section id="related-characters"></section>
-<section id="related-locations"></section>
 <aside>
-    <div>
-        <button>&star; Favourite</button>
-        <a href="#">Go to Forums</a>
+    <div id="article-options">
+        <button id="fav-article" type="button">&star; Favourite</button>
+        <a id="go-to-forum" href="/forum.html">Go to Forums</a>
     </div>
     <div id="infobox">
         <figure id="article-image">
-            <img src="" alt="">
-            <figcaption></figcaption>
+            <img src="{{articleImage}}" alt="">
+            <figcaption>{{articleImageCaption}}</figcaption>
         </figure>
-        <div id="infobox-sections"></div>
+        <div id="infobox-sections" xlu-include-file="/templates/infobox-section.html" data-array='{{info}}'></div>
     </div>
 </aside>
+<h2 id="article-title">{{title}}</h2>
+<section id="introduction">{{introduction}}</section>
+<section id="mythic-history">
+    <h3>Mythic History</h3>
+    <div>
+        {{mythicHistory}}
+    </div>
+</section>
+<section id="gallery">
+    <h3>Gallery</h3>
+    <ul xlu-include-file="/templates/gallery-image.html" data-array='{{galleryImages}}'></ul>
+</section>
+<section id="related-myths">
+    <h3>Related Myths</h3>
+    <ul class="illustrated-article-list" xlu-include-file="/templates/illustrated-link.html" data-array='{{relatedMyths}}'></ul>
+</section>
+<section id="related-characters">
+    <h3>Related Characters</h3>
+    <ul class="illustrated-article-list" xlu-include-file="/templates/illustrated-link.html" data-array='{{relatedCharacters}}'></ul>
+</section>
+<section id="related-locations">
+    <h3>Related Locations</h3>
+    <ul class="illustrated-article-list" xlu-include-file="/templates/illustrated-link.html" data-array='{{relatedLocations}}'></ul>
+</section>
