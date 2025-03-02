@@ -1,0 +1,85 @@
+#article-title {
+    font-size: 3rem;
+}
+#article section:not(.infobox-section) {
+    margin-bottom: 1.8rem;
+}
+#article h3 {
+    font-size: 2rem;
+}
+#introduction, #mythic-history {
+    font-size: 0.8rem;
+}
+#article {
+    line-height: 1.5;
+}
+#article aside {
+    float: right;
+    padding-left: 0.5rem;
+}
+#article p, #article h3, #article-title {
+    margin-bottom: 1rem;
+}
+#gallery ul {
+    line-height: 0;
+    background-color: #D9D9D9;
+    padding: 0.8rem;
+    display: flex;
+    column-gap: 0.6rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#gallery img {
+    width: 12rem;
+    height: 8rem;
+    object-fit: cover;
+}
+#article-options {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+}
+#fav-article {
+    line-height: 1;
+    background-color: #d0b37b;
+    color: white;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+#go-to-forum {
+    color: black;
+    background-color: #d9d9d9;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5rem;
+}
+#infobox {
+    background-color: #6B4C3A;
+    color: white;
+}
+.infobox-section .section-header {
+    background-color: #CAA996;
+    padding: 0.1rem;
+}
+.infobox-section .section-content {
+    padding: 0.4rem;
+}
+.infobox-section {
+    font-size: 0.7rem;
+    text-align: center;
+}
+#article-image {
+    padding: 0.6rem;
+}
+#article-image img {
+    width: 100%;
+    object-fit: cover;
+}
+#article-image figcaption {
+    font-size: 0.6rem;
+}
