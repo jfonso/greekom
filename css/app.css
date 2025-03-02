@@ -137,7 +137,7 @@ input {
     cursor: pointer;
 }
 
-#input-label {
+.input-label {
     color: #FFFFFF;
     display: block;
 }
