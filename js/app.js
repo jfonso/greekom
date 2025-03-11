@@ -52,6 +52,35 @@ window.addEventListener('load',function(){
         e.target.nextElementSibling.classList.toggle('show');
         document.querySelector('body').addEventListener('click',hideDropdown)
     });
+    function validatePassword() {
+        let confirmPasswordInput = this;
+        let passwordInput = document.querySelector(confirmPasswordInput.dataset['confirmtarget']);
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordInput.setCustomValidity("Passwords don't match.");
+        } else {
+            confirmPasswordInput.setCustomValidity('');
+        }
+    }
+    document.querySelectorAll('form').forEach(function(form){
+        form.querySelectorAll('[type=password][data-confirmtarget]').forEach(function(confirmPasswordInput){
+            let passwordInput = form.querySelector(confirmPasswordInput.dataset['confirmtarget']);
+            confirmPasswordInput.onchange = validatePassword;
+            passwordInput.onchange = () => confirmPasswordInput.dispatchEvent(new Event('change'));
+        });
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let url = new  URL(form.action);
+            url.port = 3000;
+            fetch(url.toString(),{
+                method: form.method,
+                body: JSON.stringify(Object.fromEntries(new FormData(form))),
+            }).then(function(){
+                window.location.href = form.dataset['successurl'];
+            });
+            return false;
+        }
+    });
 });
 
 async function xLuIncludeFile() {
