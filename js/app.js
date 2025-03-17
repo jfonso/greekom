@@ -61,22 +61,36 @@ window.addEventListener('load',function(){
             confirmPasswordInput.setCustomValidity('');
         }
     }
+    function validateRegex() {
+        let textInput = this
+        let regex = new RegExp(textInput.dataset['validationregex']);
+        if (!textInput.value.match(regex)) {
+            textInput.setCustomValidity(textInput.dataset['validationhint']);
+            textInput.closest('form').reportValidity();
+            textInput.onkeyup = validateRegex;
+        } else {
+            textInput.setCustomValidity('');
+            textInput.onkeyup = undefined;
+        }
+    }
     document.querySelectorAll('form').forEach(function(form){
-        form.querySelectorAll('[type=password][data-confirmtarget]').forEach(function(confirmPasswordInput){
+        form.querySelectorAll('input[type=password][data-confirmtarget]').forEach(function(confirmPasswordInput){
             let passwordInput = form.querySelector(confirmPasswordInput.dataset['confirmtarget']);
             confirmPasswordInput.onchange = validatePassword;
             passwordInput.onchange = () => confirmPasswordInput.dispatchEvent(new Event('change'));
         });
+        form.querySelectorAll('input[type="text"][data-validationregex]').forEach(function(textInput){
+            textInput.onchange = validateRegex;
+        });
         form.onsubmit = function (e) {
-            e.preventDefault();
-            e.stopPropagation();
             let url = new  URL(form.action);
             url.port = 3000;
+            console.log(Object.fromEntries(new FormData(form)));
             fetch(url.toString(),{
                 method: form.method,
                 body: JSON.stringify(Object.fromEntries(new FormData(form))),
             }).then(function(){
-                window.location.href = form.dataset['successurl'];
+                form.querySelector('.successToast').classList.add('show');
             });
             return false;
         }
