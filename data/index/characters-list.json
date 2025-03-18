@@ -2,21 +2,21 @@
     {
         "name": "Aphrodite",
         "id": "aphrodite",
-        "image_url": "img/characters/greek-gods-aphrodite.jpg"
+        "image_url": "img/characters/aphrodite/greek-gods-aphrodite.jpg"
     },
     {
         "name": "Apollo",
         "id": "apollo",
-        "image_url": "img/characters/greek-gods-apollo.jpg"
+        "image_url": "img/characters/apollo/greek-gods-apollo.jpg"
     },
     {
         "name": "Ares",
         "id": "ares",
-        "image_url": "img/characters/greek-gods-ares.jpg"
+        "image_url": "img/characters/ares/greek-gods-ares.jpg"
     },
     {
         "name": "Artemis",
         "id": "artemis",
-        "image_url": "img/characters/greek-gods-artemis.jpg"
+        "image_url": "img/characters/artemis/greek-gods-artemis.jpg"
     }
 ]
