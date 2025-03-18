@@ -54,7 +54,7 @@ window.addEventListener('load',function(){
     });
     function validatePassword() {
         let confirmPasswordInput = this;
-        let passwordInput = document.querySelector(confirmPasswordInput.dataset['confirmtarget']);
+        let passwordInput = document.querySelector(confirmPasswordInput.dataset.confirmtarget);
         if (passwordInput.value !== confirmPasswordInput.value) {
             confirmPasswordInput.setCustomValidity("Passwords don't match.");
         } else {
@@ -63,9 +63,9 @@ window.addEventListener('load',function(){
     }
     function validateRegex() {
         let textInput = this
-        let regex = new RegExp(textInput.dataset['validationregex']);
+        let regex = new RegExp(textInput.dataset.validationregex);
         if (!textInput.value.match(regex)) {
-            textInput.setCustomValidity(textInput.dataset['validationhint']);
+            textInput.setCustomValidity(textInput.dataset.validationhint);
             textInput.closest('form').reportValidity();
             textInput.onkeyup = validateRegex;
         } else {
@@ -73,29 +73,92 @@ window.addEventListener('load',function(){
             textInput.onkeyup = undefined;
         }
     }
+    function validateUnique() {
+        let input = this;
+        if(input.value.length === 0) return;
+        let form = this.closest('form');
+        let url = new URL(form.action);
+        url.port = 3000;
+        url.searchParams.set(`${input.name}`,input.value)
+        input.setCustomValidity('...');
+        fetch(url.toString()).then(function(data){
+            data.json().then(function(data){
+                console.log(data.length);
+                if (data.length > 0) {
+                    input.setCustomValidity('Input value already exists in the database.');
+                } else {
+                    input.setCustomValidity('');
+                }
+            });
+        })
+    }
     document.querySelectorAll('form').forEach(function(form){
         form.querySelectorAll('input[type=password][data-confirmtarget]').forEach(function(confirmPasswordInput){
-            let passwordInput = form.querySelector(confirmPasswordInput.dataset['confirmtarget']);
+            let passwordInput = form.querySelector(confirmPasswordInput.dataset.confirmtarget);
             confirmPasswordInput.onchange = validatePassword;
             passwordInput.onchange = () => confirmPasswordInput.dispatchEvent(new Event('change'));
         });
         form.querySelectorAll('input[type="text"][data-validationregex]').forEach(function(textInput){
             textInput.onchange = validateRegex;
         });
+        form.querySelectorAll('input[unique]').forEach(function(input){
+            input.onchange = validateUnique;
+        });
         form.onsubmit = function (e) {
             let url = new  URL(form.action);
             url.port = 3000;
-            console.log(Object.fromEntries(new FormData(form)));
-            fetch(url.toString(),{
-                method: form.method,
-                body: JSON.stringify(Object.fromEntries(new FormData(form))),
-            }).then(function(){
-                form.querySelector('.successToast').classList.add('show');
+            let config = {
+                method: form.method
+            };
+            if (config.method.toLowerCase()==='get') {
+                (new FormData(form)).entries().forEach(([name,value]) => {
+                    url.searchParams.set(name,value);
+                })
+            } else {
+                config.body = JSON.stringify(Object.fromEntries(new FormData(form)));
+            }
+            fetch(url.toString(),config).then(function(data){
+                let event = new Event('success');
+                event.data = data;
+                form.dispatchEvent(event);
+            }).catch(function(data){
+                console.log(data);
+                let event = new Event('error');
+                event.data = data;
+                form.dispatchEvent(event);
             });
             return false;
         }
     });
+    let username = getCookie('username');
+    if (username.length > 0) {
+        let auth = document.querySelector('#authentication');
+        auth.setAttribute('xlu-include-file','templates/navbar/authenticated.html')
+        auth.dataset.username = username;
+    }
 });
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+  
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
 
 async function xLuIncludeFile() {
     let z = document.getElementsByTagName("*");
