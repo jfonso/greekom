@@ -9,6 +9,7 @@
 }
 #introduction, #mythic-history {
     font-size: 0.8rem;
+    text-align: justify;
 }
 #article {
     line-height: 1.5;
@@ -16,9 +17,12 @@
 #article aside {
     float: right;
     padding-left: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 #article p, #article h3, #article-title {
     margin-bottom: 1rem;
+    text-align: justify;
 }
 #gallery ul {
     line-height: 0;
@@ -32,7 +36,7 @@
 #gallery img {
     width: 12rem;
     height: 8rem;
-    object-fit: cover;
+    object-fit: fill;
 }
 #article-options {
     display: flex;
@@ -65,6 +69,8 @@
 .infobox-section .section-header {
     background-color: #CAA996;
     padding: 0.1rem;
+    font-size: 1rem;
+    color: #000000;
 }
 .infobox-section .section-content {
     padding: 0.4rem;
@@ -77,6 +83,7 @@
     padding: 0.6rem;
 }
 #article-image img {
+    max-width: 30rem;
     width: 100%;
     object-fit: cover;
 }
