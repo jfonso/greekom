@@ -41,8 +41,7 @@ window.addEventListener('load',function(){
             document.querySelector('body').removeEventListener('click',hideDropdown)
         });
     }
-    document.querySelector('body').addEventListener('click',function(e){
-        if (!e.target.classList.contains('dropdown-toggle')) return;
+    function handleDropdownToggle(e) {
         e.preventDefault();
         e.stopPropagation();
         hideDropdown();
@@ -50,17 +49,145 @@ window.addEventListener('load',function(){
             el.classList.remove('show');
         });
         e.target.nextElementSibling.classList.toggle('show');
-        document.querySelector('body').addEventListener('click',hideDropdown)
+        document.querySelector('body').addEventListener('click',hideDropdown);
+    }
+    function handleLougout(e) {
+        deleteCookie('user');
+    }
+    document.querySelector('body').addEventListener('click',function(e){
+        if (e.target.classList.contains('dropdown-toggle')) return handleDropdownToggle(e);
+        if (e.target.id==='logout') return handleLougout(e);
     });
+    function validatePassword() {
+        let confirmPasswordInput = this;
+        let passwordInput = document.querySelector(confirmPasswordInput.dataset.confirmtarget);
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordInput.setCustomValidity("Passwords don't match.");
+        } else {
+            confirmPasswordInput.setCustomValidity('');
+        }
+    }
+    function validateRegex() {
+        let textInput = this
+        let regex = new RegExp(textInput.dataset.validationregex);
+        if (!textInput.value.match(regex)) {
+            textInput.setCustomValidity(textInput.dataset.validationhint);
+            textInput.closest('form').reportValidity();
+            textInput.onkeyup = validateRegex;
+        } else {
+            textInput.setCustomValidity('');
+            textInput.onkeyup = undefined;
+        }
+    }
+    function validateUnique() {
+        let input = this;
+        if(input.value.length === 0) return;
+        let form = this.closest('form');
+        let url = new URL(form.action);
+        url.port = 3000;
+        url.searchParams.set(`${input.name}`,input.value)
+        input.setCustomValidity('...');
+        fetch(url.toString()).then(function(data){
+            data.json().then(function(data){
+                console.log(data.length);
+                if (data.length > 0) {
+                    input.setCustomValidity('Input value already exists in the database.');
+                } else {
+                    input.setCustomValidity('');
+                }
+            });
+        })
+    }
+    document.querySelectorAll('form').forEach(function(form){
+        form.querySelectorAll('input[type=password][data-confirmtarget]').forEach(function(confirmPasswordInput){
+            let passwordInput = form.querySelector(confirmPasswordInput.dataset.confirmtarget);
+            confirmPasswordInput.onchange = validatePassword;
+            passwordInput.onchange = () => confirmPasswordInput.dispatchEvent(new Event('change'));
+        });
+        form.querySelectorAll('input[type="text"][data-validationregex]').forEach(function(textInput){
+            textInput.onchange = validateRegex;
+        });
+        form.querySelectorAll('input[unique]').forEach(function(input){
+            input.onchange = validateUnique;
+        });
+        form.onsubmit = function (e) {
+            let url = new  URL(form.action);
+            url.port = 3000;
+            let config = {
+                method: form.method
+            };
+            if (config.method.toLowerCase()==='get') {
+                (new FormData(form)).entries().forEach(([name,value]) => {
+                    url.searchParams.set(name,value);
+                })
+            } else {
+                config.body = JSON.stringify(Object.fromEntries(new FormData(form)));
+            }
+            fetch(url.toString(),config).then(function(data){
+                let event = new Event('success');
+                event.data = data;
+                form.dispatchEvent(event);
+            }).catch(function(data){
+                console.log(data);
+                let event = new Event('error');
+                event.data = data;
+                form.dispatchEvent(event);
+            });
+            return false;
+        }
+    });
+    let username = getCookie('username');
+    if (username.length > 0) {
+        let auth = document.querySelector('#authentication');
+        auth.setAttribute('xlu-include-file','templates/navbar/authenticated.html')
+        auth.dataset.username = username;
+    }
 });
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function deleteCookie(cname) {
+    const d = new Date();
+    d.setTime(d.getTime() - 1);
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=;" + expires + ";path=/";
+}
+  
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
 
 async function xLuIncludeFile() {
     let z = document.getElementsByTagName("*");
-
+    let user = getCookie('user');
+    if (user) user = JSON.parse(user);
     for (let i = 0; i < z.length; i++) {
         if (z[i].getAttribute("xlu-include-file")) {
             let a = z[i].cloneNode(false);
-            let file = z[i].getAttribute("xlu-include-file");
+            let file;
+            if (user&&z[i].hasAttribute("auth:xlu-include-file")) {
+                file = z[i].getAttribute("auth:xlu-include-file");
+                z[i].dataset['username'] = user.username;
+                z[i].dataset['email'] = user.email;
+            } else {
+                file = z[i].getAttribute("xlu-include-file");
+            }
 
             try {
                 let response = await fetch(file);

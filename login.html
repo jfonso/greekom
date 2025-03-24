@@ -21,12 +21,18 @@
 
     <h2 id="main-title">Log in</h2>
     <section id="main-login">
-        <form id="login-form" action="">
+        <form id="login-form" action="/users" method="get">
+            <div class="toast success">
+                <span>Successfully logged in. Redirecting...</span>
+            </div>
+            <div class="toast error">
+                <span>User not found.</span>
+            </div>
             <div id="inputs">
                 <label class="input-label">Username</label>
-                <input type="text" name="username" placeholder="Username">
+                <input type="text" name="username" placeholder="Username" required>
                 <label class="input-label">Password</label>
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password" required>
             </div>
             <div id="button">
                 <button type="submit">Confirm</button>
@@ -38,6 +44,25 @@
     <footer xlu-include-file="templates/footer.html"></footer>
 
     <script>
+        document.querySelector('#login-form').addEventListener('success',function(e){
+            e.data.json().then(data => {
+                if (data.length === 0) {
+                    let toast = this.querySelector('.toast.error');
+                    toast.classList.add('show');
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                    },3000);
+                    return;
+                }
+                setCookie('user',JSON.stringify(data[0]),365);
+                let toast = this.querySelector('.toast.success');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    window.location.href = '/';
+                },3000);
+            });
+        });
         xLuIncludeFile();
     </script>
 </body>
