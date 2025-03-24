@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/myths/heracles-hydra.jpg\"},{\"url\":\"img/myths/heracles-hydra.jpg\"},{\"url\":\"img/myths/heracles-hydra.jpg\"},{\"url\":\"img/myths/heracles-hydra.jpg\"},{\"url\":\"img/myths/heracles-hydra.jpg\"},{\"url\":\"img/myths/heracles-hydra.jpg\"},{\"url\":\"img/myths/heracles-hydra.jpg\"},{\"url\":\"img/myths/heracles-hydra.jpg\"}]",
   "relatedCharacters": "[{\"id\":\"aphrodite\",\"name\":\"Aphrodite\",\"image_url\":\"img/characters/greek-gods-aphrodite.jpg\"}]",
   "relatedMyths": "[{\"id\":\"the-iliad\",\"name\":\"The Iliad\",\"image_url\":\"img/myths/TheIliad.webp\"}]",
-  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/O24.9Ganymedes.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Main Character\",\"content\":\"Heracles\"},{\"header\":\"Main Location\",\"content\":\"Greece and surrounding lands\"},{\"header\":\"Year\",\"content\":\"No specific date\"}]"
 }]

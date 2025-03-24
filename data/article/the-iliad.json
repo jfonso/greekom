@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/myths/theIliad.webp\"},{\"url\":\"img/myths/theIliad.webp\"},{\"url\":\"img/myths/theIliad.webp\"},{\"url\":\"img/myths/theIliad.webp\"},{\"url\":\"img/myths/theIliad.webp\"},{\"url\":\"img/myths/theIliad.webp\"},{\"url\":\"img/myths/theIliad.webp\"},{\"url\":\"img/myths/theIliad.webp\"}]",
   "relatedCharacters": "[{\"id\":\"aphrodite\",\"name\":\"Aphrodite\",\"image_url\":\"img/characters/greek-gods-aphrodite.jpg\"}]",
   "relatedMyths": "[{\"id\":\"the-iliad\",\"name\":\"The Iliad\",\"image_url\":\"img/myths/TheIliad.webp\"}]",
-  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/o24.9Ganymedes.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Main Character\",\"content\":\"Achilles\"},{\"header\":\"Main Location\",\"content\":\"Troy\"},{\"header\":\"Year\",\"content\":\"Around 12th or 13th century BCE\"}]"
 }]

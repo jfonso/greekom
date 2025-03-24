@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/characters/apollo/greek-gods-apollo.avif\"},{\"url\":\"img/characters/apollo/greek-gods-apollo-2.avif\"},{\"url\":\"img/characters/apollo/greek-gods-apollo-3.avif\"},{\"url\":\"img/characters/apollo/greek-gods-apollo-4.avif\"},{\"url\":\"img/characters/apollo/greek-gods-apollo-5.avif\"},{\"url\":\"img/characters/apollo/greek-gods-apollo-6.avif\"},{\"url\":\"img/characters/apollo/greek-gods-apollo-7.avif\"},{\"url\":\"img/characters/apollo/greek-gods-apollo-8.avif\"}]",
   "relatedCharacters": "[{\"id\":\"artemis\",\"name\":\"Artemis\",\"image_url\":\"img/characters/artemis/greek-gods-artemis.avif\"},{\"id\":\"leto\",\"name\":\"Leto\",\"image_url\":\"img/characters/leto/greek-gods-leto.avif\"},{\"id\":\"zeus\",\"name\":\"Zeus\",\"image_url\":\"img/characters/zeus/greek-gods-zeus.avif\"}]",
   "relatedMyths": "[{\"id\":\"the-iliad\",\"name\":\"The Iliad\",\"image_url\":\"img/myths/TheIliad.webp\"}]",
-  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/O24.9Ganymedes.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympus\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Parents\",\"content\":\"Zeus and Leto\"},{\"header\":\"Affiliation\",\"content\":\"God\"},{\"header\":\"Gender\",\"content\":\"Male\"}]"
 }]

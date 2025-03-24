@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/characters/eros/greek-gods-eros.webp\"},{\"url\":\"img/characters/eros/greek-gods-eros-2.avif\"},{\"url\":\"img/characters/eros/greek-gods-eros-3.avif\"},{\"url\":\"img/characters/eros/greek-gods-eros-4.avif\"},{\"url\":\"img/characters/eros/greek-gods-eros-5.avif\"},{\"url\":\"img/characters/eros/greek-gods-eros-6.webp\"},{\"url\":\"img/characters/eros/greek-gods-eros-7.avif\"},{\"url\":\"img/characters/eros/greek-gods-eros-8.avif\"}]",
   "relatedCharacters": "[{\"id\":\"aphrodite\",\"name\":\"Aphrodite\",\"image_url\":\"img/characters/aphrodite/greek-gods-aphrodite.avif\"},{\"id\":\"ares\",\"name\":\"Ares\",\"image_url\":\"img/characters/ares/greek-gods-ares.avif\"}]",
   "relatedMyths": "[{\"id\":\"eros-and-psyche\",\"name\":\"Eros and Psyche\",\"image_url\":\"img/myths/ErosAndPsyche.jpg\"}]",
-  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/O24.9Ganymedes.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Parents\",\"content\":\"Aphrodite and Ares\"},{\"header\":\"Affiliation\",\"content\":\"God\"},{\"header\":\"Gender\",\"content\":\"Male\"}]"
 }]

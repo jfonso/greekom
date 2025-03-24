@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"},{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"},{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"},{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"},{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"},{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"},{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"},{\"url\":\"img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg\"}]",
   "relatedCharacters": "[{\"id\":\"aphrodite\",\"name\":\"Aphrodite\",\"image_url\":\"img/characters/greek-gods-aphrodite.jpg\"}]",
   "relatedMyths": "[{\"id\":\"the-iliad\",\"name\":\"The Iliad\",\"image_url\":\"img/myths/TheIliad.webp\"}]",
-  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/O24.9Ganymedes.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Main Character\",\"content\":\"King Atlas\"},{\"header\":\"Main Location\",\"content\":\"Atlantis\"},{\"header\":\"Year\",\"content\":\"Over 9000 years over Plato&#39;s time\"}]"
 }]

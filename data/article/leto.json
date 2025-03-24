@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/characters/leto/greek-gods-leto.avif\"},{\"url\":\"img/characters/leto/greek-gods-leto-2.avif\"},{\"url\":\"img/characters/leto/greek-gods-leto-3.avif\"},{\"url\":\"img/characters/leto/greek-gods-leto-4.avif\"},{\"url\":\"img/characters/leto/greek-gods-leto-5.avif\"},{\"url\":\"img/characters/leto/greek-gods-leto-6.avif\"},{\"url\":\"img/characters/leto/greek-gods-leto-7.avif\"},{\"url\":\"img/characters/leto/greek-gods-leto-8.jpg\"}]",
   "relatedCharacters": "[{\"id\":\"zeus\",\"name\":\"Zeus\",\"image_url\":\"img/characters/zeus/greek-gods-zeus.avif\"},{\"id\":\"apollo\",\"name\":\"Apollo\",\"image_url\":\"img/characters/apollo/greek-gods-apollo.avif\"},{\"id\":\"artemis\",\"name\":\"Artemis\",\"image_url\":\"img/characters/artemis/greek-gods-artemis.avif\"}]",
   "relatedMyths": "[{\"id\":\"birth-of-apollo-and-artemis\",\"name\":\"The Birth of Apollo and Artemis\",\"image_url\":\"img/myths/BirthOfApolloAndArtemis.jpg\"}]",
-  "relatedLocations": "[{\"id\":\"delos.html\",\"name\":\"Delos\",\"image_url\":\"img/locations/delos.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"delos.html\",\"name\":\"Delos\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif"}]",
   "info": "[{\"header\":\"Parents\",\"content\":\"Coeus and Phoebe\"},{\"header\":\"Affiliation\",\"content\":\"Titaness\"},{\"header\":\"Gender\",\"content\":\"Female\"}]"
 }]

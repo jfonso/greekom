@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/characters/ares/greek-gods-ares.avif\"},{\"url\":\"img/characters/ares/greek-gods-ares-2.avif\"},{\"url\":\"img/characters/ares/greek-gods-ares-3.avif\"},{\"url\":\"img/characters/ares/greek-gods-ares-4.avif\"},{\"url\":\"img/characters/ares/greek-gods-ares-5.avif\"},{\"url\":\"img/characters/ares/greek-gods-ares-6.avif\"},{\"url\":\"img/characters/ares/greek-gods-ares-7.avif\"},{\"url\":\"img/characters/ares/greek-gods-ares-8.jpg\"}]",
   "relatedCharacters": "[{\"id\":\"aphrodite\",\"name\":\"Aphrodite\",\"image_url\":\"img/characters/aphrodite/greek-gods-aphrodite.avif\"},{\"id\":\"hephaestus\",\"name\":\"Hephaestus\",\"image_url\":\"img/characters/hephaestus/greek-gods-hephaestus.avif\"},{\"id\":\"eros\",\"name\":\"Eros\",\"image_url\":\"img/characters/eros/greek-gods-eros.webp\"},{\"id\":\"athena\",\"name\":\"Athena\",\"image_url\":\"img/characters/athena/greek-gods-athena.avif\"}]",
   "relatedMyths": "[{\"id\":\"the-iliad\",\"name\":\"The Iliad\",\"image_url\":\"img/myths/TheIliad.webp\"}]",
-  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/O24.9Ganymedes.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"olympos.html\",\"name\":\"Olympos\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Parents\",\"content\":\"Zeus and Hera\"},{\"header\":\"Affiliation\",\"content\":\"God\"},{\"header\":\"Gender\",\"content\":\"Male\"}]"
 }]

@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/characters/zeus/greek-gods-zeus.avif\"},{\"url\":\"img/characters/zeus/greek-gods-zeus-2.avif\"},{\"url\":\"img/characters/zeus/greek-gods-zeus-3.avif\"},{\"url\":\"img/characters/zeus/greek-gods-zeus-4.avif\"},{\"url\":\"img/characters/zeus/greek-gods-zeus-5.avif\"},{\"url\":\"img/characters/zeus/greek-gods-zeus-6.avif\"},{\"url\":\"img/characters/zeus/greek-gods-zeus-7.avif\"},{\"url\":\"img/characters/zeus/greek-gods-zeus-8.avif\"}]",
   "relatedCharacters": "[{\"id\":\"aphrodite\",\"name\":\"Aphrodite\",\"image_url\":\"img/characters/aphrodite/greek-gods-aphrodite.avif\"},{\"id\":\"apollo\",\"name\":\"Apollo\",\"image_url\":\"img/characters/apollo/greek-gods-apollo.avif\"},{\"id\":\"artemis\",\"name\":\"Artemis\",\"image_url\":\"img/characters/artemis/greek-gods-artemis.avif\"}]",
   "relatedMyths": "[{\"id\":\"titanomachy\",\"name\":\"The Titanomachy\",\"image_url\":\"img/myths/TheTitanomachy.jpg\"},{\"id\":\"trojan-war\",\"name\":\"The Trojan War\",\"image_url\":\"img/myths/TheTrojanWar.jpg\"}]",
-  "relatedLocations": "[{\"id\":\"mount-olympus.html\",\"name\":\"Mount Olympus\",\"image_url\":\"img/locations/mount-olympus.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"mount-olympus.html\",\"name\":\"Mount Olympus\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Parents\",\"content\":\"Cronus and Rhea\"},{\"header\":\"Affiliation\",\"content\":\"God\"},{\"header\":\"Gender\",\"content\":\"Male\"}]"
 }]

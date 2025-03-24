@@ -7,6 +7,6 @@
   "galleryImages": "[{\"url\":\"img/characters/athena/greek-gods-athena.avif\"},{\"url\":\"img/characters/athena/greek-gods-athena-2.avif\"},{\"url\":\"img/characters/athena/greek-gods-athena-3.avif\"},{\"url\":\"img/characters/athena/greek-gods-athena-4.avif\"},{\"url\":\"img/characters/athena/greek-gods-athena-5.avif\"},{\"url\":\"img/characters/athena/greek-gods-athena-6.avif\"},{\"url\":\"img/characters/athena/greek-gods-athena-7.avif\"},{\"url\":\"img/characters/athena/greek-gods-athena-8.avif\"}]",
   "relatedCharacters": "[{\"id\":\"zeus\",\"name\":\"Zeus\",\"image_url\":\"img/characters/zeus/greek-gods-zeus.avif\"},{\"id\":\"artemis\",\"name\":\"Artemis\",\"image_url\":\"img/characters/artemis/greek-gods-artemis.avif\"},{\"id\":\"ares\",\"name\":\"Ares\",\"image_url\":\"img/characters/ares/greek-gods-ares.avif\"}]",
   "relatedMyths": "[{\"id\":\"odyssey\",\"name\":\"The Odyssey\",\"image_url\":\"img/myths/TheOdyssey.jpg\"},{\"id\":\"trojan-war\",\"name\":\"The Trojan War\",\"image_url\":\"img/myths/TheTrojanWar.jpg\"}]",
-  "relatedLocations": "[{\"id\":\"athens.html\",\"name\":\"Athens\",\"image_url\":\"img/locations/athens.jpg\"}]",
+  "relatedLocations": "[{\"id\":\"athens.html\",\"name\":\"Athens\",\"image_url\":\"img/locations/olympus/greek-locations-olympus.avif\"}]",
   "info": "[{\"header\":\"Parents\",\"content\":\"Zeus and Metis\"},{\"header\":\"Affiliation\",\"content\":\"Goddess\"},{\"header\":\"Gender\",\"content\":\"Female\"}]"
 }]

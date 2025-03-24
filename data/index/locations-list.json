@@ -1,22 +1,22 @@
 [
     {
-        "name": "Olympos",
-        "id": "olympos",
-        "image_url": "img/locations/olympus/O24.9Ganymedes.jpg"
+        "name": "Olympus",
+        "id": "olympus",
+        "image_url": "img/locations/olympus/greek-locations-olympus.avif"
     },
     {
-        "name": "Haides",
-        "id": "haides",
-        "image_url": "img/locations/hades/1.jpg"
+        "name": "Hades",
+        "id": "hades",
+        "image_url": "img/locations/hades/greek-locations-hades.avif"
     },
     {
-        "name": "Elysion",
-        "id": "elyson",
-        "image_url": "img/locations/elysium/the_elysian_fields.jpg"
+        "name": "Elysium",
+        "id": "elysium",
+        "image_url": "img/locations/elysium/greek-locations-elysium.avif"
     },
     {
         "name": "Tartarus",
         "id": "tartarus",
-        "image_url": "img/locations/tartarus/tartarus.jpg"
+        "image_url": "img/locations/tartarus/greek-locations-tartarus.avif"
     }
 ]
