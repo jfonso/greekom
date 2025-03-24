@@ -40,18 +40,8 @@
         "image_url": "img/characters/hephaestus/greek-gods-hephaestus.jpg"
     },
     {
-        "name": "Hermes",
-        "id": "hermes",
-        "image_url": "img/characters/hermes/greek-gods-hermes.jpg"
-    },
-    {
         "name": "Leto",
         "id": "leto",
         "image_url": "img/characters/leto/greek-gods-leto.jpg"
-    },
-    {
-        "name": "Deimos",
-        "id": "deimos",
-        "image_url": "img/characters/deimos/greek-gods-deimos.jpg"
     }
 ]
