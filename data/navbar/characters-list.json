@@ -48,5 +48,10 @@
         "name": "Leto",
         "id": "leto",
         "image_url": "img/characters/leto/greek-gods-leto.jpg"
+    },
+    {
+        "name": "Deimos",
+        "id": "deimos",
+        "image_url": "img/characters/deimos/greek-gods-deimos.jpg"
     }
 ]
