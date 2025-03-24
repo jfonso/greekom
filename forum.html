@@ -32,6 +32,7 @@
     <footer xlu-include-file="templates/footer.html"></footer>
 
     <script>
+        requiresAuthentication();
         document.getElementById('thread-list').dataset['json'] = `//${window.location.hostname}:3000/threads`;
         xLuIncludeFile();
     </script>

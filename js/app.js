@@ -173,6 +173,10 @@ function getCookie(cname) {
     return "";
 }
 
+function requiresAuthentication() {
+    if(!getCookie('user')) window.location.replace('login.html');
+}
+
 async function xLuIncludeFile() {
     let z = document.getElementsByTagName("*");
     let user = getCookie('user');
