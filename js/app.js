@@ -54,9 +54,23 @@ window.addEventListener('load',function(){
     function handleLougout(e) {
         deleteCookie('user');
     }
+    function hideModal(e) {
+        document.querySelectorAll('.modal.show').forEach(function(el){
+            if (!e.target.classList.contains('modal')) return;
+            el.classList.remove('show');
+            document.querySelector('body').removeEventListener('click',hideModal)
+        });
+    }
+    function handleModalToggle(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector(e.target.dataset.togglemodal).classList.add('show');
+        document.querySelector('body').addEventListener('click',hideModal);
+    }
     document.querySelector('body').addEventListener('click',function(e){
         if (e.target.classList.contains('dropdown-toggle')) return handleDropdownToggle(e);
         if (e.target.id==='logout') return handleLougout(e);
+        if (e.target?.dataset?.togglemodal) return handleModalToggle(e);
     });
     function validatePassword() {
         let confirmPasswordInput = this;
@@ -187,8 +201,8 @@ async function xLuIncludeFile() {
             let file;
             if (user&&z[i].hasAttribute("auth:xlu-include-file")) {
                 file = z[i].getAttribute("auth:xlu-include-file");
-                z[i].dataset['username'] = user.username;
-                z[i].dataset['email'] = user.email;
+                z[i].dataset.username = user.username;
+                z[i].dataset.email = user.email;
             } else {
                 file = z[i].getAttribute("xlu-include-file");
             }

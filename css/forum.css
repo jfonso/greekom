@@ -55,6 +55,7 @@
     padding: 0.5rem 2rem;
     font-weight: bold;
     border-radius: 2rem;
+    cursor: pointer;
 }
 #fav-thread button {
     background-color: transparent;
