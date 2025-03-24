@@ -22,7 +22,7 @@
     <footer xlu-include-file="templates/footer.html"></footer>
 
     <script>
-        document.getElementById('main').dataset['json'] = '/data/forum/thread/'+(new URLSearchParams(window.location.search)).get('id')+'.json';
+        document.getElementById('main').dataset['json'] = `//${window.location.hostname}:3000/threads?id=${(new URLSearchParams(window.location.search)).get('id')}`;
         xLuIncludeFile();
     </script>
 </body>
