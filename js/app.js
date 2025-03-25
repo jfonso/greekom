@@ -34,7 +34,7 @@ function xLuIncludeFile() {
 }
 */
 
-window.addEventListener('load',function(){
+document.addEventListener('templates-loaded',function(){
     function hideDropdown() {
         document.querySelectorAll('.dropdown-menu.show').forEach(function(el){
             el.classList.remove('show');
@@ -56,7 +56,7 @@ window.addEventListener('load',function(){
     }
     function hideModal(e) {
         document.querySelectorAll('.modal.show').forEach(function(el){
-            if (!e.target.classList.contains('modal')) return;
+            if (!e.target.classList.contains('modal')&&!e.target.classList.contains('close')) return;
             el.classList.remove('show');
             document.querySelector('body').removeEventListener('click',hideModal)
         });
@@ -130,6 +130,9 @@ window.addEventListener('load',function(){
             let config = {
                 method: form.method
             };
+            form.querySelectorAll('.fill-with-timestamp').forEach(el => {
+                el.value = (new Date()).toISOString().split('T')[0];
+            });
             if (config.method.toLowerCase()==='get') {
                 (new FormData(form)).entries().forEach(([name,value]) => {
                     url.searchParams.set(name,value);
@@ -159,6 +162,7 @@ window.addEventListener('load',function(){
 });
 
 function setCookie(cname, cvalue, exdays) {
+    if (cvalue===undefined) return deleteCookie(cname);
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
@@ -196,7 +200,7 @@ async function xLuIncludeFile() {
     let user = getCookie('user');
     if (user) user = JSON.parse(user);
     for (let i = 0; i < z.length; i++) {
-        if (z[i].getAttribute("xlu-include-file")) {
+        if (z[i].getAttribute("xlu-include-file")||(user&&z[i].hasAttribute("auth:xlu-include-file"))) {
             let a = z[i].cloneNode(false);
             let file;
             if (user&&z[i].hasAttribute("auth:xlu-include-file")) {
@@ -219,7 +223,7 @@ async function xLuIncludeFile() {
                         let dataValue = z[i].dataset[dataKey];
                         if (dataKey==='json') {
                             dataKey = 'array';
-                            response = await fetch(dataValue);
+                            response = await fetch(dataValue.replace('{{hostname}}',window.location.hostname));
                             if (response.ok) {
                                 dataValue = await response.text();
                             }
@@ -244,6 +248,7 @@ async function xLuIncludeFile() {
 
 
                     a.removeAttribute("xlu-include-file");
+                    a.removeAttribute("auth:xlu-include-file");
                     //a.innerHTML = await response.text();
                     a.innerHTML = content;
                     z[i].parentNode.replaceChild(a, z[i]);
@@ -256,5 +261,7 @@ async function xLuIncludeFile() {
             return;
         }
     }
+    let event = new Event('templates-loaded');
+    document.dispatchEvent(event);
 }
 

@@ -222,7 +222,7 @@ input {
     margin: auto;
     padding: 1.25rem;
     border: 1px solid #888;
-    width: 80%;
+    max-width: 36rem;
 }
   
 /* The Close Button */
@@ -238,4 +238,7 @@ input {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+.modal-header {
+    margin: 0.5rem 0;
 }

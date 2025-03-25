@@ -25,7 +25,7 @@
             </div>
             <h2 id="main-title">Forum</h2>
         </div>
-        <ul id="thread-list" xlu-include-file="templates/thread-item.html" data-json="data/forum/thread-list.json"></ul>
+        <ul id="thread-list" xlu-include-file="templates/thread-item.html" data-json="//{{hostname}}:3000/threads"></ul>
     </section>
 
 
@@ -33,7 +33,6 @@
 
     <script>
         requiresAuthentication();
-        document.getElementById('thread-list').dataset['json'] = `//${window.location.hostname}:3000/threads`;
         xLuIncludeFile();
     </script>
 </body>

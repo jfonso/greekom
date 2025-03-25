@@ -14,15 +14,24 @@
 <section id="opening-post" xlu-include-file="templates/post.html" data-user="{{user}}" data-content="{{content}}">
 </section>
 <hr>
-<section id="thread-responses" xlu-include-file="templates/post.html" data-array='{{posts}}'></section>
+<section id="thread-responses" xlu-include-file="templates/post.html" data-json='//{{hostname}}:3000/posts?thread_id={{id}}&_sort=created'></section>
 <div id="reply-modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <div>
-            <textarea name="post" cols="30" rows="10"></textarea>
-        </div>
-        <div>
-            <button type="button">Post</button>
-        </div>
+        <div class="modal-header">New Post</div>
+        <form action="/posts" method="POST">
+            <div class="toast success">
+                <span>Post submited. Reloading...</span>
+            </div>
+            <input type="hidden" name="thread_id" value="{{id}}">
+            <input type="hidden" name="created" class="fill-with-timestamp">
+            <input type="hidden" name="user" value="{{username}}">
+            <div class="form-group">
+                <textarea name="content" rows="10" maxlength="1000"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Post</button>
+            </div>
+        </form>
     </div>
 </div>

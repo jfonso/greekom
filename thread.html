@@ -17,13 +17,36 @@
 <body>
     <header xlu-include-file="templates/header.html"></header>
     <nav xlu-include-file="templates/navbar.html"></nav>
-    <section id="main" class="thread" xlu-include-file="templates/thread.html" data-json="data/forum/thread/thread-1.json">
+    <section id="main" class="thread" auth:xlu-include-file="templates/thread.html" data-json="//{{hostname}}:3000/threads?id=">
     </section>
     <footer xlu-include-file="templates/footer.html"></footer>
 
     <script>
         requiresAuthentication();
-        document.getElementById('main').dataset['json'] = `//${window.location.hostname}:3000/threads?id=${(new URLSearchParams(window.location.search)).get('id')}`;
+        document.getElementById('main').dataset['json'] += (new URLSearchParams(window.location.search)).get('id');
+        document.addEventListener('templates-loaded',function(e){
+            document.querySelector('#reply-modal form').addEventListener('success',function(e){
+                e.data.json().then(data => {
+                    if (data.length === 0) {
+                        let toast = this.querySelector('.toast.error');
+                        toast.classList.add('show');
+                        setTimeout(() => {
+                            toast.classList.remove('show');
+                        },3000);
+                        return;
+                    }
+                    let toast = this.querySelector('.toast.success');
+                    toast.classList.add('show');
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                        let url = new URL(window.location.toString());
+                        url.hash = data.id;
+                        window.location.replace(url.toString());
+                        window.location.reload();
+                    },3000);
+                });
+            });
+        });
         xLuIncludeFile();
     </script>
 </body>
