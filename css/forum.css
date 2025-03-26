@@ -93,6 +93,13 @@
     width: 100%;
     border-radius: 0.5rem;
 }
+.modal form input[type="text"] {
+    width: 100%;
+    border-radius: 0.5rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    border: 2px solid gray;
+}
 .modal form button {
     background-color: #6E401B;
     color: #FFFFFF;
@@ -104,4 +111,16 @@
     align-items: center;
     padding: 0.3rem 2rem;
     cursor: pointer;
+}
+#forum-controls button {
+    position: absolute;
+    background-color: #dfdccf;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    cursor: pointer;
+    top: 0.5rem
 }

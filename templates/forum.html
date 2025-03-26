@@ -1,0 +1,35 @@
+<div>
+    <div id="forum-controls">
+        <div>
+            <button type="button" data-togglemodal="#reply-modal">New thread</button>
+        </div>
+    </div>
+    <div id="forum-search-container">
+        <input type="text" name="search" placeholder="Username, Title...">
+    </div>
+    <h2 id="main-title">Forum</h2>
+</div>
+<ul id="thread-list" xlu-include-file="templates/thread-item.html" data-json="//{{hostname}}:3000/threads"></ul>
+
+<div id="reply-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">New Thread</div>
+        <form action="/threads" method="POST">
+            <div class="toast success">
+                <span>Post submited. Reloading...</span>
+            </div>
+            <input type="hidden" name="updated" class="fill-with-timestamp">
+            <input type="hidden" name="user" value="{{username}}">
+            <div class="form-group">
+                <input type="text" name="title" placeholder="Title" data-validationregex="^[a-zA-Z]" data-validationhint="Title must start with a letter." required>
+            </div>
+            <div class="form-group">
+                <textarea name="content" rows="10" minlength="5" maxlength="1000" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+</div>

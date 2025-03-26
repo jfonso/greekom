@@ -18,14 +18,7 @@
     <header xlu-include-file="templates/header.html"></header>
     <nav xlu-include-file="templates/navbar.html"></nav>
 
-    <section id="main" class="forum">
-        <div>
-            <div id="forum-search-container">
-                <input type="text" name="search" placeholder="Username, Title...">
-            </div>
-            <h2 id="main-title">Forum</h2>
-        </div>
-        <ul id="thread-list" xlu-include-file="templates/thread-item.html" data-json="//{{hostname}}:3000/threads"></ul>
+    <section id="main" class="forum" auth:xlu-include-file="templates/forum.html">
     </section>
 
 
@@ -33,6 +26,31 @@
 
     <script>
         requiresAuthentication();
+        
+        document.addEventListener('templates-loaded',function(e){
+            if(window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
+            document.querySelector('#reply-modal form').addEventListener('success',function(e){
+                e.data.json().then(data => {
+                    if (data.length === 0) {
+                        let toast = this.querySelector('.toast.error');
+                        toast.classList.add('show');
+                        setTimeout(() => {
+                            toast.classList.remove('show');
+                        },3000);
+                        return;
+                    }
+                    let toast = this.querySelector('.toast.success');
+                    toast.classList.add('show');
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                        let url = new URL(window.location.toString());
+                        url.hash = `thread-${data.id}`;
+                        window.location.replace(url.toString());
+                        window.location.reload();
+                    },3000);
+                });
+            });
+        });
         xLuIncludeFile();
     </script>
 </body>
