@@ -84,8 +84,9 @@
 }
 #article-image img {
     max-width: 30rem;
+    max-height: 23rem;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 #article-image figcaption {
     font-size: 0.6rem;
