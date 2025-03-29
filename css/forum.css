@@ -78,10 +78,35 @@
     line-height: 1.5;
     padding: 1rem;
     border-radius: 1rem;
+    text-align: justify;
 }
 .post-content p {
     margin-bottom: 1rem;
 }
 #thread-responses {
     padding: 1rem;
+}
+
+@media (max-device-width: 500px) {
+    #main {
+        max-width: 50rem;
+        border-radius: 2rem;
+        max-height: 90vh;
+    }
+    #forum-title {
+        padding-top: 1rem;
+    }
+    #forum-search-container input {
+        width: 14rem;
+        margin-top: 2rem;
+    }
+    .thread-item {
+        height: 2rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    .post-content {
+        font-size: 0.8rem;
+    }
 }

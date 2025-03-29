@@ -11,6 +11,9 @@ footer {
     gap: .5rem;
     padding: 1rem 0;
     font-size: 0.8rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 footer, footer a {
@@ -144,4 +147,35 @@ input {
 #main {
     max-width: 72rem;
     margin: 1rem auto;
+}
+
+@media (max-device-width: 1200px) {
+    #main-title {
+        font-size: 3rem;
+    }
+
+    #catalog {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 2rem;
+    }
+
+    #catalog ul {
+        margin-left: 2rem;
+    }
+
+    #catalog-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-device-width: 500px) {
+    #main-title {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+    #thread-controls button {
+        margin-top: 2rem;
+    }
 }

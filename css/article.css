@@ -91,3 +91,72 @@
 #article-image figcaption {
     font-size: 0.6rem;
 }
+
+@media (max-device-width: 1200px) {
+    p {
+        font-size: 1rem;
+    }
+
+    #infobox {
+        margin-right: 3rem;
+    }
+
+    #go-to-forum {
+        margin-right: 3rem;
+    }
+
+    #introduction, #mythic-history {
+        font-size: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    #article-title {
+        font-size: 3rem;
+        margin-left: 3rem;
+    }
+
+    #article h3 {
+        margin-left: 3rem;
+    }
+
+    #gallery ul {
+        margin-left: 3rem;
+    }
+
+    #article-image img {
+        max-width: 25rem;
+    }
+}
+
+@media (max-device-width: 500px) {
+    p {
+        font-size: 0.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+
+    #article-title {
+        margin: 3rem 3rem;
+        font-size: 3rem;
+    }
+
+    #introduction, mythic-history {
+        font-size: 0.5rem;
+    }
+
+    #article-image img {
+        max-width: 25rem;
+    }
+    #article-image figcaption {
+        font-size: 0.75rem;
+    }
+    .infobox-section {
+        font-size: 0.9rem;
+    }
+    .infobox-header {
+        font-size: 1.25rem;
+    }
+}
+
