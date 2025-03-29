@@ -51,3 +51,23 @@
     border-radius: 0.8rem;
     background-color: #716d6d;
 }
+
+@media (max-device-width: 500px) {
+    #menu-option-content {
+        height: 60vh;
+    }
+    .input-label {
+        font-size: 1.25rem;
+    }
+    #profile-menu {
+        font-size: 10rem;
+    }
+    #profile-option {
+        font-size: 1.8rem;
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
+    #profile-menu {
+        height: 65vh;
+    }
+}

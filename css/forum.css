@@ -86,19 +86,24 @@
 #thread-responses {
     padding: 1rem;
 }
+#forum-title {
+    display: flex;
+    justify-content: center;
+}
+#main {
+    max-width: 110rem;
+    border-radius: 2rem;
+}
 
 @media (max-device-width: 500px) {
     #main {
         max-width: 50rem;
-        border-radius: 2rem;
-        max-height: 90vh;
+
     }
-    #forum-title {
-        padding-top: 1rem;
-    }
+
     #forum-search-container input {
         width: 14rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
     .thread-item {
         height: 2rem;
@@ -107,6 +112,6 @@
         align-items: center;
     }
     .post-content {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 }
