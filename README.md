@@ -13,6 +13,10 @@ localizaciones, mitos y un foro. En el foro los usuarios podrán discutir
 sobre la veracidad de los mitos contados, así como las múltiples versiones
 existentes de estos.
 
+### Servidor HTML
+
+Para ver la página es necesario un servidor para los ficheros HTML, como por ejemplo la extensión Live Server de Visual Studio Code.
+
 ### Servidor JSON
 
 Para el correcto funcionamiento de la página, es necesario instalar el modulo npm json-server.
