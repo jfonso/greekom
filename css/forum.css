@@ -113,7 +113,7 @@
     padding: 0.3rem 2rem;
     cursor: pointer;
 }
-#forum-controls > div {
+#forum-controls {
     display: flex;
     align-items: center;
 }
