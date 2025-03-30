@@ -9,7 +9,7 @@
         <input type="text" name="search" placeholder="Username, Title...">
     </div>
 </div>
-<ul id="thread-list" xlu-include-file="templates/thread-item.html" data-json="//{{hostname}}:3000/threads"></ul>
+<ul id="thread-list" xlu-include-file="templates/thread-item.html" data-json="//{{hostname}}:3000/threads?_sort=updated&_order=desc"></ul>
 
 <div id="reply-modal" class="modal">
     <div class="modal-content">
@@ -22,10 +22,10 @@
             <input type="hidden" name="updated" class="fill-with-timestamp">
             <input type="hidden" name="user" value="{{username}}">
             <div class="form-group">
-                <input type="text" name="title" placeholder="Title" data-validationregex="^[a-zA-Z]" data-validationhint="Title must start with a letter." required>
+                <input type="text" name="title" placeholder="Title" minlength="6" maxlength="30" data-validationregex="^[a-zA-Z]" data-validationhint="Title must start with a letter." required>
             </div>
             <div class="form-group">
-                <textarea name="content" rows="10" minlength="5" maxlength="1000" required></textarea>
+                <textarea name="content" rows="10" minlength="6" maxlength="1000" required></textarea>
             </div>
             <div class="form-group">
                 <button type="submit">Post</button>

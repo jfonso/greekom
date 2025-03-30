@@ -25,13 +25,13 @@
             </div>
             <div id="inputs">
                 <label class="input-label">Username</label>
-                <input type="text" name="username" placeholder="Username" minlength="6" maxlength="26" data-validationregex="^[a-zA-Z][\w_]+$" data-validationhint="Username must start with a letter and can only contain letters numbers and underscores." unique>
+                <input type="text" name="username" placeholder="Username" minlength="6" maxlength="26" data-validationregex="^[a-zA-Z][a-zA-Z0-9_]+$" data-validationhint="Username must start with a letter and can only contain letters numbers and underscores." unique required>
                 <label class="input-label">Email</label>
-                <input type="email" name="email" placeholder="Email" maxlength="64" unique>
+                <input type="email" name="email" placeholder="Email" maxlength="64" unique required>
                 <label class="input-label">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password" minlength="6" maxlength="18">
+                <input type="password" id="password" name="password" placeholder="Password" minlength="6" maxlength="18" required>
                 <label class="input-label">Confirm Password</label>
-                <input type="password" data-confirmtarget="#password" placeholder="Confirm Password" minlength="6" maxlength="18">
+                <input type="password" data-confirmtarget="#password" placeholder="Confirm Password" minlength="6" maxlength="18" required>
             </div>
             <div id="button"><button type="submit">Confirm</button></div>
         </form>

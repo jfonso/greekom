@@ -44,9 +44,10 @@
                     setTimeout(() => {
                         toast.classList.remove('show');
                         let url = new URL(window.location.toString());
-                        url.hash = `thread-${data.id}`;
-                        window.location.replace(url.toString());
-                        window.location.reload();
+                        url.pathname = 'thread.html';
+                        url.searchParams.set('id',data.id);
+                        console.log(url.toString());
+                        window.location.href = url.toString();
                     },3000);
                 });
             });

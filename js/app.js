@@ -84,13 +84,11 @@ document.addEventListener('templates-loaded',function(){
     function validateRegex() {
         let textInput = this
         let regex = new RegExp(textInput.dataset.validationregex);
-        if (!textInput.value.match(regex)) {
+        if (textInput.value.match(regex)===null) {
             textInput.setCustomValidity(textInput.dataset.validationhint);
             textInput.closest('form').reportValidity();
-            textInput.onkeyup = validateRegex;
         } else {
             textInput.setCustomValidity('');
-            textInput.onkeyup = undefined;
         }
     }
     function validateUnique() {
@@ -115,16 +113,18 @@ document.addEventListener('templates-loaded',function(){
     document.querySelectorAll('form').forEach(function(form){
         form.querySelectorAll('input[type=password][data-confirmtarget]').forEach(function(confirmPasswordInput){
             let passwordInput = form.querySelector(confirmPasswordInput.dataset.confirmtarget);
-            confirmPasswordInput.onchange = validatePassword;
-            passwordInput.onchange = () => confirmPasswordInput.dispatchEvent(new Event('change'));
+            confirmPasswordInput.addEventListener('change',validatePassword);
+            passwordInput.addEventListener('change', () => confirmPasswordInput.dispatchEvent(new Event('change')));
         });
         form.querySelectorAll('input[type="text"][data-validationregex]').forEach(function(textInput){
-            textInput.onchange = validateRegex;
+            textInput.addEventListener('keyup',validateRegex);
         });
         form.querySelectorAll('input[unique]').forEach(function(input){
-            input.onchange = validateUnique;
+            input.addEventListener('change',validateUnique);
         });
-        form.onsubmit = function (e) {
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+            e.stopPropagation();
             let url = new  URL(form.action);
             url.port = 3000;
             let config = {
@@ -151,7 +151,7 @@ document.addEventListener('templates-loaded',function(){
                 form.dispatchEvent(event);
             });
             return false;
-        }
+        });
     });
     let username = getCookie('username');
     if (username.length > 0) {
