@@ -15,13 +15,13 @@ existentes de estos.
 
 ### Servidor JSON
 
-Para el correcto funcionmiento de la página es necesario instalar el modulo npm json-server.
+Para el correcto funcionamiento de la página, es necesario instalar el modulo npm json-server.
 
 ```
 npm i -g json-server
 ```
 
-La base de datos debe crearse copiando el archivo data/db.json.example fuera de la carpeta proyecto quitando la extension .example.
+La base de datos debe crearse copiando el archivo data/db.json.example fuera de la carpeta del proyecto quitando la extension _.example_.
 
 ```
 cp ./data/db.json.example ../db.json
