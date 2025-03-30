@@ -92,11 +92,11 @@
     }
     #login-form {
         width: 40rem;
-        max-height: 40vh;
+        max-height: 20vh;
     }
     #signup-form {
         width: 40rem;
-        max-height: 70vh;
+        max-height: 35vh;
     }
     .input-label {
         font-size: 2rem;

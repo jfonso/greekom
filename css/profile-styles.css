@@ -52,12 +52,12 @@
     background-color: #716d6d;
 }
 
-@media (max-device-width: 500px) {
+@media (max-device-width: 1200px) {
     #menu-option-content {
-        height: 60vh;
+        height: 65vh;
     }
     .input-label {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     #profile-menu {
         font-size: 10rem;
@@ -68,6 +68,38 @@
         margin-bottom: 1rem;
     }
     #profile-menu {
-        height: 65vh;
+        height: 60vh;
+    }
+}
+
+@media (max-device-width: 500px) {
+    #menu-option-content {
+        height: 40vh;
+    }
+    .input-label {
+        font-size: 2rem;
+    }
+    input {
+        width: 30rem;
+        height: 3rem;
+        font-size: 2rem;
+    }
+    #input-background {
+        height: 6.5rem;
+        width: 35rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #profile-menu {
+        font-size: 10rem;
+    }
+    #profile-option {
+        font-size: 1.8rem;
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
+    #profile-menu {
+        height: 35vh;
     }
 }
