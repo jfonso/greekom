@@ -1,13 +1,11 @@
-<div>
+<div id="forum-title">
     <div id="forum-controls">
-        <div>
-            <button type="button" data-togglemodal="#reply-modal">New thread</button>
-        </div>
+        <button type="button" data-togglemodal="#reply-modal">New thread</button>
     </div>
+    <h2 id="main-title">Forum</h2>
     <div id="forum-search-container">
         <input type="text" name="search" placeholder="Username, Title...">
     </div>
-    <h2 id="main-title">Forum</h2>
 </div>
 <ul id="thread-list" xlu-include-file="templates/thread-item.html" data-json="//{{hostname}}:3000/threads"></ul>
 

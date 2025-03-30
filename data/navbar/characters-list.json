@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Aphrodite",
+        "id": "aphrodite",
+        "image_url": "img/characters/aphrodite/greek-gods-aphrodite.jpg"
+    },
+    {
+        "name": "Apollo",
+        "id": "apollo",
+        "image_url": "img/characters/apollo/greek-gods-apollo.jpg"
+    },
+    {
+        "name": "Ares",
+        "id": "ares",
+        "image_url": "img/characters/ares/greek-gods-ares.jpg"
+    },
+    {
+        "name": "Artemis",
+        "id": "artemis",
+        "image_url": "img/characters/artemis/greek-gods-artemis.jpg"
+    },
+    {
+        "name": "Eros",
+        "id": "eros",
+        "image_url": "img/characters/eros/greek-gods-eros.jpg"
+    },
+    {
+        "name": "Zeus",
+        "id": "zeus",
+        "image_url": "img/characters/zeus/greek-gods-zeus.jpg"
+    },
+    {
+        "name": "Athena",
+        "id": "athena",
+        "image_url": "img/characters/athena/greek-gods-athena.jpg"
+    },
+    {
+        "name": "Hephaestus",
+        "id": "hephaestus",
+        "image_url": "img/characters/hephaestus/greek-gods-hephaestus.jpg"
+    },
+    {
+        "name": "Leto",
+        "id": "leto",
+        "image_url": "img/characters/leto/greek-gods-leto.jpg"
+    }
+]

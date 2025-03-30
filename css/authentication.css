@@ -43,3 +43,28 @@
     color: #FFFFFF;
     display: block;
 }
+
+@media (max-device-width: 500px) {
+    #main-title {
+        font-size: 4rem;
+    }
+    #login-form {
+        width: 40rem;
+        max-height: 60vh;
+    }
+    .input-label {
+        font-size: 1.25rem;
+        margin-top:0.3rem;
+    }
+    input {
+        height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    #button button {
+        font-size: 1.2rem;
+        height: 5rem;
+        width: 8.5rem;
+        border-radius: 2rem;
+        margin-top: 3rem;
+    }
+}

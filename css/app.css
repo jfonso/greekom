@@ -11,6 +11,8 @@ footer {
     gap: .5rem;
     padding: 1rem 0;
     font-size: 0.8rem;
+    width: 100%;
+    bottom: 0;
 }
 
 footer, footer a {
@@ -132,7 +134,7 @@ input {
 .article-link img {
     width: 8rem;
     height: 8rem;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 50%;
     margin-bottom: 0.25rem;
 }
@@ -241,4 +243,63 @@ input {
 }
 .modal-header {
     margin: 0.5rem 0;
+}
+@media (max-device-width: 1200px) {
+    #main-title {
+        font-size: 3rem;
+    }
+
+    #catalog {
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+        width: 100vw;
+    }
+
+    #catalog-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1rem;
+        padding: 0;
+        margin-top: -4rem;
+    }
+    #catalog ul li a {
+        font-size: 2rem;
+    }
+
+    #authentication {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        padding: 0;
+    }
+}
+
+@media (max-device-width: 500px) {
+    #main-title {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+    #thread-controls button {
+        margin-top: 2rem;
+    }
+    .article-link img {
+        width: 10rem;
+        height: 10rem;
+    }
+    .article-link-text {
+        font-size: 1.25rem;
+    }
+    .illustrated-article-list {
+        margin-top: 2rem;
+    }
+    .index-section-title {
+        margin-top: 5rem;
+        margin-left: 3rem;
+    }
+    .index-section > hr {
+        max-width: 80%;
+    }
 }

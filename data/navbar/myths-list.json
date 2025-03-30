@@ -1,0 +1,37 @@
+[
+    {
+        "name": "The twelve labors of Heracles",
+        "id": "the-twelve-labors-of-heracles",
+        "image_url": "img/myths/heracles-hydra.jpg"
+    },
+    {
+        "name": "Zeus' abduction of Ganymede",
+        "id": "zeus-abduction-of-ganymede",
+        "image_url": "img/myths/Z32.2Ganymedes.jpg"
+    },
+    {
+        "name": "Plato's island of Atlantis",
+        "id": "plato-s-island-of-atlantis",
+        "image_url": "img/myths/The-Lost-City-of-Atlantis-Ancient-Greece.jpg"
+    },
+    {
+        "name": "The Iliad",
+        "id": "the-iliad",
+        "image_url": "img/myths/TheIliad.webp"
+    },
+    {
+        "name": "The myth of Persephone and Hades",
+        "id": "persephone-and-hades",
+        "image_url": "img/myths/persephone_and_hades/greek-myths-persephone.avif"
+    },
+    {
+        "name": "The birth of Athena",
+        "id": "birth-of-athena",
+        "image_url": "img/myths/birth_of_athena/greek-myths-athena.avif"
+    },
+    {
+        "name": "The labyrinth and the minotaur",
+        "id": "labyrinth-and-minotaur",
+        "image_url": "img/myths/labyrinth_and_minotaur/greek-myths-minotaur.avif"
+    }
+]

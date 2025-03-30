@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Olympus",
+        "id": "olympus",
+        "image_url": "img/locations/olympus/O24.9Ganymedes.jpg"
+    },
+    {
+        "name": "The Underworld",
+        "id": "hades",
+        "image_url": "img/locations/hades/K14.1Haides.jpg"
+    },
+    {
+        "name": "Elysium",
+        "id": "elysium",
+        "image_url": "img/locations/elysium/the_elysian_fields.jpg"
+    },
+    {
+        "name": "Tartarus",
+        "id": "tartarus",
+        "image_url": "img/locations/tartarus/tartarus.jpg"
+    },
+    {
+        "name": "The Island of the Blessed",
+        "id": "island-of-blessed",
+        "image_url": "img/locations/island_of_blessed/greek-locations-island.avif"
+    },
+    {
+        "name": "The Garden of Hesperides",
+        "id": "hesperides-garden",
+        "image_url": "img/locations/hesperides_garden/greek-locations-hesperides.avif"
+    }
+]
