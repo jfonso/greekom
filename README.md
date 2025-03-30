@@ -13,6 +13,26 @@ localizaciones, mitos y un foro. En el foro los usuarios podrán discutir
 sobre la veracidad de los mitos contados, así como las múltiples versiones
 existentes de estos.
 
+### Servidor JSON
+
+Para el correcto funcionmiento de la página es necesario instalar el modulo npm json-server.
+
+```
+npm i -g json-server
+```
+
+La base de datos debe crearse copiando el archivo data/db.json.example fuera de la carpeta proyecto quitando la extension .example.
+
+```
+cp ./data/db.json.example ../db.json
+```
+
+Finalmente se debe ejectuar json-server.
+
+```
+json-server --watch ../db.json
+```
+
 
 ### Requisitos funcionales
 - Registro: el usuario tendrá la opción de registrarse en la web.
