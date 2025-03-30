@@ -8,11 +8,10 @@
     color: white;
     line-height: 1.2;
 }
-/*#forum-search-container {
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
-}*/
+#forum-search-container {
+    display: flex;
+    align-items: center;
+}
 #forum-search-container input {
     height: 0.6rem;
     font-size: 0.8rem;
@@ -114,6 +113,10 @@
     padding: 0.3rem 2rem;
     cursor: pointer;
 }
+#forum-controls > div {
+    display: flex;
+    align-items: center;
+}
 #forum-controls button {
     background-color: #dfdccf;
     border-radius: 1rem;
@@ -127,7 +130,6 @@
 #forum-title {
     display: flex;
     justify-content: space-between;
-    padding-top: 1rem;
 }
 #main {
     max-width: 110rem;
@@ -142,6 +144,7 @@
 
     #forum-search-container input {
         width: 18rem;
+        height: 1.5rem;
     }
     .thread-item {
         height: 2.5rem;
@@ -166,7 +169,6 @@
     }
     #forum-search-container input {
         width: 12rem;
-        margin-top: 3rem;
     }
     .thread-item {
         height: 4rem;
