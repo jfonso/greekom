@@ -17,6 +17,19 @@
     margin: 1rem 0 3rem 0;
 }
 
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    width: 20rem;
+    max-height: 55vh;
+    padding: 2rem 2rem;
+    background-color: #3B2A2A;
+    margin: 1rem 0 3rem 0;
+}
+
 #inputs {
     width: 100%;
     display: flex;
@@ -44,16 +57,49 @@
     display: block;
 }
 
+@media (max-device-width: 1200px) {
+    #main-title {
+        font-size: 4rem;
+    }
+    #login-form {
+        width: 40rem;
+        max-height: 40vh;
+    }
+    #signup-form {
+        width: 40rem;
+        max-height: 65vh;
+    }
+    .input-label {
+        font-size: 2rem;
+        margin-top:0.5rem;
+    }
+    input {
+        height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    #button button {
+        font-size: 1.5rem;
+        height: 6rem;
+        width: 10rem;
+        border-radius: 2rem;
+        margin-top: 3rem;
+    }
+}
+
 @media (max-device-width: 500px) {
     #main-title {
         font-size: 4rem;
     }
     #login-form {
         width: 40rem;
-        max-height: 60vh;
+        max-height: 40vh;
+    }
+    #signup-form {
+        width: 40rem;
+        max-height: 70vh;
     }
     .input-label {
-        font-size: 1.25rem;
+        font-size: 2rem;
         margin-top:0.3rem;
     }
     input {
